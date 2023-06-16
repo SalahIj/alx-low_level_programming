@@ -21,8 +21,11 @@ int main(void)
 				{
 					putchar('\n');
 				}
-				putchar(',');
-				putchar(' ');
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
