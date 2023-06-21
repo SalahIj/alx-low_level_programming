@@ -6,7 +6,7 @@
 */
 
 
-int maun(void)
+int main(void)
 {
 	unsigned long f1 = 0, f2 = 1 ,s;
 	float T;
