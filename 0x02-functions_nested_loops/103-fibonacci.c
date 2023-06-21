@@ -2,25 +2,24 @@
 
 /**
 * main - Entry point
-* Return: Always 0.
+* Return: Always (0)
 */
-
 
 int main(void)
 {
-	int i = 0;
-	long j = 1, k = 2, sum = k;
+	int a = 1, b = 2, sum = 0, tem;
 
-	while (k + j < 4000000)
+	while (a <= 4000000)
 	{
-		k += j;
-		if (k % 2 == 0)
+		if (a % 2 == 0)
 		{
-			sum += k;
-			j = k - j;
-			++i;
+			sum += a;
 		}
-	printf("%ld\n", sum);
+		tem = a;
+		a = b;
+		b = tem + b;
+	}
+	printf("%d\n", sum);
 	return (0);
 }
 
