@@ -2,7 +2,6 @@
 
 /**
  * main - computes and prints the sum of all the multiples of '3' or '5'.
- * 
  * Return: the sum.
  */
 
