@@ -5,6 +5,8 @@
 * Return: Always (0)
 */
 
+
+
 int main(void)
 {
 	int a = 1, b = 2, sum = 0, tem;
@@ -19,6 +21,7 @@ int main(void)
 		a = b;
 		b = tem + b;
 	}
+
 	printf("%d\n", sum);
 	return (0);
 }
