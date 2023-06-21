@@ -8,23 +8,19 @@
 
 int main(void)
 {
-	unsigned long f1 = 0, f2 = 1 ,s;
-	float T;
+	int i = 0;
+	long j = 1, k = 2, sum = k;
 
-	while (1)
+	while (k + j < 4000000)
 	{
-		s = f1 + f2;
-		if (s > 4000000)
+		k += j;
+		if (k % 2 == 0)
 		{
-			break;
+			sum += k;
+			j = k - j;
+			++i;
 		}
-		if ((s % 2) == 0)
-		{
-			T += s;
-			f1 = f2;
-			f2 = s;
-		}
-		printf("%.0f\n", T);
-	}
+	printf("%ld\n", sum);
 	return (0);
 }
+
