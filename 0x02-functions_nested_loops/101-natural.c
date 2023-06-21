@@ -11,7 +11,7 @@ int main(void)
 	int s = 0;
 	int i = 0;
 
-	while (i < n)
+	while (i < 1024)
 	{
 		if (i % 3 == 0 || i % 5 == 0)
 		{
