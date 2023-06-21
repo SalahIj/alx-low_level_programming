@@ -18,7 +18,7 @@ int main(void)
 		{
 			break;
 		}
-		if else ((s % 2) == 0)
+		if ((s % 2) == 0)
 		{
 			T += s;
 			f1 = f2;
