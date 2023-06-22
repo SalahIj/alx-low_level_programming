@@ -38,9 +38,8 @@ long int Prime_fac(long int n)
 
 int main(void)
 {
-	long int n = 612852475143;
-	long int m = Prime_fac(n);
+	long int m = Prime_fac(612852475143);
 
-	printf("The largest prime factor of %ld is %ld\n", n, m);
+	printf("%ld\n", m);
 	return (0);
 }
