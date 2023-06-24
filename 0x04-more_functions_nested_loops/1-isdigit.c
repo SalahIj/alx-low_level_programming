@@ -1,8 +1,8 @@
 #include <ctype.h>
 
 /**
-* _isdigit - function that checks for a digit (0 through 9).
-* Return: 1 if c is a digit, 0 otherwise.
+* _isdigit - check for a digit (0 through 9).
+* Return: 1 mean digit, 0 mean non digit.
 * @c: the input of the function.
 */
 

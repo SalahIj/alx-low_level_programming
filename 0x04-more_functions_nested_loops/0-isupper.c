@@ -1,8 +1,8 @@
 #include <ctype.h>
 
 /**
-* _isupper - function that checks for uppercase character.
-* Return: 1 if c is uppercase, 0 otherwise.
+* _isupper - for checking the uppercase character.
+* Return: (1) mean uppercase, 0 otherwise.
 * @c: the input of the function.
 */
 

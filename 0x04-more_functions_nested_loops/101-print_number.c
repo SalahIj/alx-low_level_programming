@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-* print_number - function that prints an integer.
-* @n: the input of the function.
+* print_number - prints a random integer.
+* @n: input of the function.
 * Return: none.
 */
 
@@ -13,12 +13,12 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		m = -m;
+		m = -1 * m;
 	}
 	if (m / 10)
 	{
 		print_number(m / 10);
 	}
 
-	_putchar((m % 10) + 48);
+	_putchar((m % 10) + '0');
 }

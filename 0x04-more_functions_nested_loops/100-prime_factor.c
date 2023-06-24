@@ -2,7 +2,7 @@
 #include <math.h>
 
 /**
-* Prime_fac - finds and prints the largest prime factor of a number.
+* Prime_fac - give as input the largest prime factor of a number.
 * @n: the input of the function
 * Return: the largest prime factor.
 */

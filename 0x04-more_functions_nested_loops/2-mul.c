@@ -1,6 +1,6 @@
 
 /**
-* mul - function that multiplies two integers.
+* mul - multiplie two integers.
 * Return: the result of multiplication.
 * @a: the first integer.
 * @b: the second integer.

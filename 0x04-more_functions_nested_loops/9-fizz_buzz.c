@@ -2,26 +2,26 @@
 #include <stdio.h>
 
 /**
-* main - Entry point.
+* main - door of code.
 * Return: Always 0 is a success.
 */
 
 
 int main(void)
 {
-	int i;
+	int j = 1;
 
-	for (i = 1; i <= 100; i++)
+	while (j <= 100)
 	{
-		if ((i % 3 == 0) && (i % 5 == 0))
+		if ((j % 3 == 0) && (j % 5 == 0))
 		{
 			printf("FizzBuzz");
 		}
-		else if (i % 3 == 0)
+		else if (j % 3 == 0)
 		{
 			printf("Fizz");
 		}
-		else if (i % 5 == 0)
+		else if (j % 5 == 0)
 		{
 			printf("Buzz");
 		}
@@ -29,7 +29,7 @@ int main(void)
 		{
 			printf("%d", i);
 		}
-		if (i != 100)
+		if (j != 100)
 		{
 			printf(" ");
 		}
@@ -37,6 +37,7 @@ int main(void)
 		{
 			printf("\n");
 		}
+		j++;
 	}
 	return (0);
 }
