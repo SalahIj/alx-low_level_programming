@@ -9,17 +9,17 @@
 
 int main(void)
 {
-	int a = 1, b = 2, sum = 0, tem;
+	int a = 1, b = 2, s = 0, t;
 
 	while (a <= 4000000)
 	{
 		if (a % 2 == 0)
 		{
-			sum += a;
+			s += a;
 		}
-		tem = a;
+		t = a;
 		a = b;
-		b = tem + b;
+		b = t + b;
 	}
 
 	printf("%d\n", sum);
