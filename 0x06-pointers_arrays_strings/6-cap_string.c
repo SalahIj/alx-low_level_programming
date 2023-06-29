@@ -19,7 +19,7 @@ char *cap_string(char *str)
 	{
 		for (j = 0; j < 13; j++)
 		{
-			if (str[i] == sepa[j])
+			if (str[i] == s[j])
 			{
 				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
 				{
