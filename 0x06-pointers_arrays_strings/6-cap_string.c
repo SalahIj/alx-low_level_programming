@@ -13,17 +13,17 @@ char *cap_string(char *str)
 
 	if (str[0] >= 'a' && str[0] <= 'z')
 	{
-		str[0] = str[0] -32;
+		str[0] = str[0] - 32;
 	}
-	for (i = 0; str[i]; i++)
+	for (i = 1; str[i]; i++)
 	{
 		for (j = 0; j < 13; j++)
 		{
-			if (str[i] == s[j])
+			if (str[i] >= 'a' && str[i] <= 'z')
 			{
-				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				if (str[i - 1] == sepa[j])
 				{
-					str[i + 1] = str[i + 1] - 32;
+					str[i] = str[i] - 32;
 				}
 			}
 		}
