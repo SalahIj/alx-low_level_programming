@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
 * _strspn - calculeting the length.
@@ -23,9 +24,9 @@ unsigned int _strspn(char *s, char *accept)
 			}
 			else if (accept[i + 1] == '\0')
 			{
-				return (n);
+				return (sum);
 			}
 		}
 	}
-	return (n);
+	return (sum);
 }
