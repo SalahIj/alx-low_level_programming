@@ -12,7 +12,7 @@ int _iter_square(int p, int j)
 	if (j * j < p)
 	{
 		j++;
-		_iter_square(p, j);
+		return (_iter_square(p, j));
 	}
 	else if (j * j == p)
 	{
