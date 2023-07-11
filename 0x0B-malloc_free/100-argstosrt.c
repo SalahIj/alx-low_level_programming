@@ -34,11 +34,11 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	for (; i < ac; i++; l++)
+	for (; i < ac; i++)
 	{
 		l += _strlen(av[i]);
 	}
-	srt = malloc(sizeof(char) * l + 1);
+	srt = malloc((sizeof(char) * l) + ac  + 1);
 	if (srt == NULL)
 	{
 		return (NULL);
