@@ -43,7 +43,7 @@ char *argstostr(int ac, char **av)
 			j++;
 		}
 		l += s;
-		l++;
+		l = l + 2;
 		i++;
 	}
 	srt = malloc(sizeof(*srt) * (l + 1));
