@@ -36,11 +36,11 @@ char *argstostr(int ac, char **av)
 	}
 	while (i < ac)
 	{
-		l = l + strlen(av[i]);
+		l = l + _strlen(av[i]);
 		l++;
 		i++;
 	}
-	srt = malloc(sizeof(*srt) * (l + 1));
+	srt = malloc(sizeof(char) * (l + 1));
 	if (srt == NULL)
 	{
 		return (NULL);
