@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * array_range - creating an array of intergs.
@@ -20,16 +19,18 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	tab = (int *)malloc(sizeof(tab) * (num + 1));
-	if (tab == NULL)
+	else
 	{
-		return (NULL);
+		tab = (int *)malloc(sizeof(int) * (num + 1));
+		if (tab == NULL)
+		{
+			return (NULL);
+		}
+		for (i = 0; i < num + 1; i++)
+		{
+			tab[i] = min;
+			min++;
+		}
+		return (tab);
 	}
-	memset(tab, 0, sizeof(tab) * (num + 1));
-	for (i = 0; i < num + 1; i++)
-	{
-		tab[i] = min;
-		min++;
-	}
-	return (tab);
 }
