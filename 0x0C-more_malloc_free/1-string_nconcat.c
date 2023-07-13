@@ -3,21 +3,6 @@
 #include <stdlib.h>
 
 /**
- * strllent - calculiting characters
- * @s: the input.
- * return: the result.
- */
-
-int strllent(char *s)
-{
-	int l;
-
-	for (l = 0; s[l]; l++)
-	;
-	return (l);
-}
-
-/**
  * string_nconcat - concatening strings.
  * @s1: the first input.
  * @s2: the second input.
@@ -28,10 +13,18 @@ int strllent(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *srt;
-	int l_1 = 0, l_2 = 0, i, ind;
+	int l_1, l_2, i, ind;
 
-	l_1 = strllent(s1);
-	l_2 = strllent(s2);
+	l_1 = _strlen(s1);
+	l_2 = _strlen(s2);
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	srt = (char *)malloc(sizeof(char) * (l_1 + n + 1));
 	if (srt == NULL)
 	{
