@@ -12,21 +12,22 @@
 int *array_range(int min, int max)
 {
 	int *tab;
-	int i, j = 0;
+	int i, num;
 
-	if (min > max)
+	num = max - min;
+	if (num < 0)
 	{
 		return (NULL);
 	}
-	tab = (int *)malloc(sizeof(tab) * (max - min + 1));
+	tab = (int *)malloc(sizeof(tab) * (num + 1));
 	if (tab == NULL)
 	{
 		return (NULL);
 	}
-	for (i = min; i <= max; i++)
+	for (i = 0; i <= num; i++)
 	{
-		tab[j] = i;
-		j++;
+		tab[i] = min;
+		min++;
 	}
 	return (tab);
 }
