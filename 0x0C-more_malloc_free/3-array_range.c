@@ -29,5 +29,6 @@ int *array_range(int min, int max)
 		tab[i] = min;
 		min++;
 	}
+	tab[num] = max;
 	return (tab);
 }
