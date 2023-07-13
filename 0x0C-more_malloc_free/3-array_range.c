@@ -24,11 +24,10 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	for (i = 0; i <= num; i++)
+	for (i = 0; i < num + 1; i++)
 	{
 		tab[i] = min;
 		min++;
 	}
-	tab[num] = max;
 	return (tab);
 }
