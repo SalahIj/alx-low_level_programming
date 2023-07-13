@@ -21,22 +21,26 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	while (s1[l_1])
+	{
 		l_1++;
-
+	}
 	while (s1[l_2])
+	{
 		l_2++;
-
+	}
 	srt = (char *)malloc(sizeof(srt) * (l_1 + n + 1));
 	if (srt == NULL)
+	{
 		return (NULL);
-
+	}
 	for (i = 0; i < l_1; i++)
 	{
 		srt[i] = s1[i];
 	}
 	while (ind < n)
+	{
 		srt[i++] = s2[ind++];
-
+	}
 	srt[i] = '\0';
 	return (srt);
 }
