@@ -37,11 +37,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		srt[i] = s1[i];
 	}
-	for (ind = 0; ind <= n; ind++)
+	for (ind = 0; ind < n; ind++)
 	{
 		srt[i] = s2[ind];
 		i++;
 	}
-	srt[i] = '\0';
+	srt[l_1 + n] = '\0';
 	return (srt);
 }
