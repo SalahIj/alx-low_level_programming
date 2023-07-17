@@ -4,7 +4,6 @@
 
 /**
  * *_strlen - calculting length.
- * new_dog - info
  * @s: the input of the function.
  * Return: the result.
 */
@@ -18,15 +17,15 @@ int _strlen(char *s)
 	return (i);
 }
 
- /**
-  * new_dog: creating a new dog.
-  *
-  * @name: the first input.
-  * @age: the second input.
-  * @owner: the third input.
-  *
-  * Return: the result.
-  */
+/**
+ * new_dog -  creating a new dog.
+ *
+ * @name: the first input.
+ * @age: the second input.
+ * @owner: the third input.
+ *
+ * Return: the result.
+*/
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
