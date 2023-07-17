@@ -4,6 +4,7 @@
 
 /**
  * *_strlen - calculting length.
+ * new_dog - info
  * @s: the input of the function.
  * Return: the result.
 */
@@ -16,14 +17,15 @@ int _strlen(char *s)
 	;
 	return (i);
 }
+
  /**
-  * new_dog - info about a dog.
+  * new_dog: creating a new dog.
   *
   * @name: the first input.
   * @age: the second input.
   * @owner: the third input.
+  *
   * Return: the result.
-  * Description: new_dog.
   */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -51,13 +53,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(P);
 		return (NULL);
 	}
-	for (i = 0; i < _strlen(name); i++)
+	for (i = 0; name[i]; i++)
 	{
 		P->name[i] = name[i];
 	}
 	P->name[i] = '\0';
 	i = 0;
-	for (i = 0; i < _strlen(owner); i++)
+	for (i = 0; owner[i]; i++)
 	{
 		P->owner[i] = owner[i];
 	}
