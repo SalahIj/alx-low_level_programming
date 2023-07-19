@@ -26,12 +26,15 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	i = 0;
-	while (i < byt + 1)
+	while (i < byt)
 	{
-		printf("%02x", p[i]);
-		printf(" ");
+		if (i == byt - 1)
+		{
+			printf("%02x\n", p[i]);
+			break;
+		}
+		printf("%02x ", p[i]);
 		i++;
 	}
-	printf("\n");
 	return (0);
 }
