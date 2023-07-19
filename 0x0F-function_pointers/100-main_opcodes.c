@@ -11,7 +11,8 @@
 int main(int argc, char *argv[])
 {
 	int byt, i;
-	char *m = (char *)main;
+	int (*m)(int, char **) = main;
+	char *p = (char *)m;
 
 	if (argc != 2)
 	{
@@ -27,7 +28,8 @@ int main(int argc, char *argv[])
 	i = 0;
 	while (i < byt)
 	{
-		printf("%02hhx ", m[i]);
+		printf("%02hhx", p[i]);
+		printf(" ");
 		i++;
 	}
 	printf("\n");
