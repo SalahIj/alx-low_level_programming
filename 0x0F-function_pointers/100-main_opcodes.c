@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	i = 0;
-	while (i < byt)
+	while (i < byt + 1)
 	{
 		printf("%02x", p[i]);
 		printf(" ");
