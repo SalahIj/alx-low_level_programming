@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int bytes, i;
+	int byt, i;
 	char *m = (char *)main;
 
 	if (argc != 2)
@@ -18,14 +18,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
-	bytes = atoi(argv[1]);
-	if (bytes <= 0)
+	byt = atoi(argv[1]);
+	if (byt < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 	i = 0;
-	while (i < bytes)
+	while (i < byt)
 	{
 		printf("%02hhx ", m[i]);
 		i++;
