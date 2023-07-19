@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int byt, i;
+	long byt, i;
 	int (*m)(int, char **) = main;
 	unsigned char *p = (unsigned char *)m;
 
