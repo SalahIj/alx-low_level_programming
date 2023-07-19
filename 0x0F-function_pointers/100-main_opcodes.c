@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int byt, i;
 	int (*m)(int, char **) = main;
-	char *p = (char *)m;
+	unsigned char *p = (unsigned char *)m;
 
 	if (argc != 2)
 	{
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	i = 0;
 	while (i < byt)
 	{
-		printf("%02hhx", p[i]);
+		printf("%02x", p[i]);
 		printf(" ");
 		i++;
 	}
