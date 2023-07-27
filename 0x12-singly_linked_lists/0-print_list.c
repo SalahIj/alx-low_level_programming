@@ -29,6 +29,9 @@ size_t print_list(const list_t *h)
 	const list_t *node;
 	int n = 0;
 
+	if (h == NULL)
+		return (0);
+
 	node = h;
 	while (node != NULL)
 	{
