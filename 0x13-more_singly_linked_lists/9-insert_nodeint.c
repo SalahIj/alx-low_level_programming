@@ -1,0 +1,40 @@
+#include "lists.h"
+
+/**
+ * insert_nodeint_at_index - insering
+ * @head: the first input.
+ * @idx: the second input
+ * @n: the third input.
+ * Return: the result.
+ */
+
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+{
+	listint_t *tmp, *add, *stock, *counter;
+	unsigned int i = 0, count = 0;
+
+	if (head == NULL)
+		return (NULL);
+	for (counter = *head; counter->next; counter = counter->next)
+		count++;
+
+	if (count < idx)
+		return (NULL);
+
+	tmp = malloc(sizeof(listint_t));
+	if (tmp == NULL)
+		return (NULL);
+	tmp->n = n;
+	tmp->next = NULL;
+
+	add = *head;
+	while (add->next && i < idx)
+	{
+		stock = add;
+		add = add->next;
+		i++;
+	}
+	stock->next = tmp;
+	tmp->next = add;
+	return (tmp);
+}
