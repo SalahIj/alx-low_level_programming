@@ -13,7 +13,6 @@ size_t find_loop_and_lenth(const listint_t *head)
 	if (head == NULL || head->next == NULL)
 	{
 		return (0);
-		exit(98);
 	}
 	slowptr = head->next;
 	fastptr = head->next->next;
