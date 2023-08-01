@@ -39,9 +39,9 @@ size_t find_loop_and_lenth(const listint_t *head)
 }
 
 /**
- *  * free_listint_safe - freeing.
- *   * @h: the input of the function.
- *    * Return: the result.
+ * free_listint_safe - freeing.
+ * @h: the input of the function.
+ * Return: the result.
  */
 
 size_t free_listint_safe(listint_t **h)
