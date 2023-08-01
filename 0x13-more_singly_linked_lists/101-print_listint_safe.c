@@ -21,7 +21,7 @@ size_t find_loop_and_lenth(const listint_t *head)
 	{
 		if (slowptr == fastptr)
 		{
-			for (slowptr = head; slowptr != head; slowptr = slowptr->next)
+			for (slowptr = head; slowptr != fastptr; slowptr = slowptr->next)
 			{
 				nodes++;
 				fastptr = fastptr->next;
