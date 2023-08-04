@@ -1,17 +1,10 @@
 #include "main.h"
 
 /**
-<<<<<<< HEAD
  *  * print_binary - printing.
  *   * @n: the input of the function.
  *    * Return: the result.
  */
-=======
- * print_binary - printing.
- * @n: the input of the function.
- * Return: the result.
-*/
->>>>>>> d9e8da8f65f775ff89cfdf5081e1cc4c4aaa5fdc
 
 void print_binary(unsigned long int n)
 {
