@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 	if (file_to == -1)
 		print_ERRO_EX(argv[2], "Error: Can't write to %s\n", 99);
 
-	while (read_numb = 1024)
+	while (read_numb == 1024)
 	{
 		read_numb = read(file_from, buffer, BUFFER_SIZE);
 		if (read_numb == -1)
