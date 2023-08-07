@@ -2,6 +2,7 @@
 #define MAIN_H
 
 #define BUFFER_SIZE 1024
+#define permission S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH
 
 #include <stdio.h>
 #include <unistd.h>

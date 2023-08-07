@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 	if (file_from == -1)
 		print_ERRO_EX(argv[1], "Error: Can't read from file %s\n", 98);
 
-	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, permission);
 	if (file_to == -1)
 		print_ERRO_EX(argv[2], "Error: Can't write to %s\n", 99);
 
