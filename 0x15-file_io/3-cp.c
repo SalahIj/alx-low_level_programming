@@ -14,19 +14,6 @@ void print_ERRO_EX(char *filename, char *message, int sort)
 }
 
 /**
- *  * print_close_ERRO - printing error and exit
- *   * @index: the first input.
- *    * @message: the second input.
- *     * @sort: the third input.
- */
-
-void print_close_ERRO(int index, char *message, int sort)
-{
-	dprintf(STDERR_FILENO, message, index);
-	exit(sort);
-}
-
-/**
  *  * main- the entry.
  *   * @argc: the first input.
  *    * @argv: the second input.
@@ -49,23 +36,23 @@ int main(int argc, char **argv)
 	if (file_to == -1)
 		print_ERRO_EX(argv[2], "Error: Can't write to %s\n", 99);
 
-	read_numb = read(file_from, buffer, BUFFER_SIZE);
-	if (read_numb == -1)
-		print_ERRO_EX(argv[1], "Error: Can't read from file %s\n", 98);
-
-	else
+	while (read_numb = 1024)
 	{
+		read_numb = read(file_from, buffer, BUFFER_SIZE);
+		if (read_numb == -1)
+			print_ERRO_EX(argv[1], "Error: Can't read from file %s\n", 98);
+
 		write_numb = write(file_to, buffer, read_numb);
-		if (write_numb == -1 || write_numb != read_numb)
+		if (write_numb == -1 || write_numb < read_numb)
 			print_ERRO_EX(argv[2], "Error: Can't write to %s\n", 99);
 	}
 	close1 = close(file_from);
 	if (close1 == -1)
-		print_close_ERRO(file_from, "Can't close fd %d\n", 100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
 
 	close2 = close(file_to);
 	if (close2 == -1)
-		print_close_ERRO(file_to, "Can't close fd %d\n", 100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
 
 	return (0);
 }
