@@ -22,7 +22,7 @@ void print_ERRO_EX(char *filename, char *message, int sort)
 
 int main(int argc, char **argv)
 {
-	int file_from, file_to, read_numb, write_numb, close1, close2;
+	int file_from, file_to, read_numb = 1024, write_numb = 0, close1, close2;
 	char buffer[BUFFER_SIZE * 8];
 
 	if (argc != 3)
