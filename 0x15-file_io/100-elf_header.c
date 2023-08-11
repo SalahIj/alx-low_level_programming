@@ -115,10 +115,8 @@ void Class(unsigned char *magic_bytes)
 void Version(unsigned char *magic_by)
 {
 	printf("  Version:                           %d", magic_by[EI_VERSION]);
-if (magic_by[EI_VERSION] == 1)
+if (magic_by[EI_VERSION] == EV_CURRENT)
 	printf(" (current)\n");
-else if (EV_CURRENT == 2)
-	printf("\n");
 else
 	printf("\n");
 }
