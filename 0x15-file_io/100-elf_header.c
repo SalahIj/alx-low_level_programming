@@ -115,15 +115,10 @@ void Class(unsigned char *magic_bytes)
 void Version(unsigned char *magic_by)
 {
 	printf("  Version:                           %d", magic_by[EI_VERSION]);
-	switch (magic_by[EI_VERSION])
-	{
-		case 1:
-			printf(" (current)\n");
-			break;
-		default:
-			printf("\n");
-			break;
-	}
+if (magic_by[EI_VERSION] == 1)
+	printf(" (current)\n");
+else
+	printf("\n");
 }
 
 /**
