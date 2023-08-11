@@ -117,6 +117,8 @@ void Version(unsigned char *magic_by)
 	printf("  Version:                           %d", magic_by[EI_VERSION]);
 if (magic_by[EI_VERSION] == 1)
 	printf(" (current)\n");
+else if (EV_CURRENT == 2)
+	printf("\n");
 else
 	printf("\n");
 }
