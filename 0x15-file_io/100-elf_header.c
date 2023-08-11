@@ -26,7 +26,7 @@ void Check_ELF_files(unsigned char *m)
 
 	while (i < 4)
 	{
-		if (m != 127 && m != 'E' && m != 'L' && m != 'F')
+		if (m[i] != 127 && m[i] != 'E' && m[i] != 'L' && m[i] != 'F')
 		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
