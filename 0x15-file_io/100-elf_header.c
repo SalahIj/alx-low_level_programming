@@ -17,27 +17,21 @@ void Close(int tab);
 
 /**
  *  * Check_ELF_files - chacking.
- *   * @magic_bytes: the input.
+ *   * @m: the input.
  */
 
-void Check_ELF_files(unsigned char *magic_bytes)
+void Check_ELF_files(unsigned char *m)
 {
-	int i = 0, j, k = 4;
-	char tab[4] = {127, 'E', 'L', 'F'};
+	int i = 0;
 
 	while (i < 4)
 	{
-		for (j = 0; j < 4; j++)
+		if (m != 127 && m != 'E' && m != 'L' && m != 'F')
 		{
-			if (magic_bytes[i] != tab[j])
-				k--;
+			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
+			exit(98);
 		}
 		i++;
-	}
-	if (k == 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
-		exit(98);
 	}
 }
 
