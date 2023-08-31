@@ -1,31 +1,30 @@
 #include "main.h"
 
 /**
- * print_binary - the name of the function
+ * print_binary - the name of the fucntion.
  * @n: the entry
- * Return: the result.
  */
 
 void print_binary(unsigned long int n)
 {
-	int contour = 0;
-	unsigned long int p;
+	int i, p = 0, w = sizeof(unsigned int long) * 8;
 
-	for (p = n; p > 0; p >>= 1)
+	for (i = w - 1; i >= 0; i--)
 	{
-		if (p & 1)
+		if ((n >> i) & 1)
 		{
-			_putchar('1');
-			contour++;
+			_putchar(49);
+			p++;
 		}
-		else if (contour != 0)
+		else if (p != 0)
 		{
-			_putchar('0');
+			_putchar(48);
 		}
 	}
-	if (contour == 0)
+
+	if (p == 0)
 	{
-		_putchar('0');
+		_putchar(48);
 	}
 }
 
