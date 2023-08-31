@@ -22,7 +22,6 @@ void print_binary(unsigned long int n)
 		{
 			c = (n >> j) & 1;
 			_putchar(c + '0');
-			i++;
 		}
 	}
 }
