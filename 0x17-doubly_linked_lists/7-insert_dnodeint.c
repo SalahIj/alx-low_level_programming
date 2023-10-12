@@ -7,6 +7,7 @@
  * @n: the third input.
  * Return: The result.
  */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *tmp, *new_node, *next_node;
@@ -22,23 +23,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	tmp = *h;
 	for (pos = 0; pos != idx - 1; pos++)
 		tmp = tmp->next;
-	if (tmp == NULL)
-		return (NULL);
 	if (tmp->next == NULL)
 	{
-		new_node->n = n;
-		new_node->prev = tmp;
-		tmp->next = new_node;
-		new_node->next = NULL;
+		return (add_dnodeint_end(h, n));
 	}
-	else
-	{
-		next_node = tmp->next;
-		tmp->next = new_node;
-		next_node->prev = new_node;
-		new_node->n = n;
-		new_node->prev = tmp;
-		new_node->next = next_node;
-	}
-	return (*h);
+	next_node = tmp->next;
+	tmp->next = new_node;
+	next_node->prev = new_node;
+	new_node->n = n;
+	new_node->prev = tmp;
+	new_node->next = next_node;
+	return (new_node);
 }
