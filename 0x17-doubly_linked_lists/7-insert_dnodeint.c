@@ -11,17 +11,14 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *temoi, *new_node;
-	unsigned int pos;
 
 	if (idx == 0)
 		return (add_dnodeint(h, n));
-	if (*h == NULL && idx != 0)
-		return (NULL);
 	temoi = *h;
-	for (pos = idx; pos != 1; pos--)
+	for (; idx != 1; idx--)
 	{
 		temoi = temoi->next;
-		if (!temoi)
+		if (temoi == NULL)
 			return (NULL);
 	}
 	if (temoi->next == NULL)
