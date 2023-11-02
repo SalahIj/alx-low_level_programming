@@ -20,7 +20,7 @@ hash_node_t *Creat_hash_case(const char *cle, const char *valeur)
 		return (NULL);
 	}
 	N->value = strdup(valeur);
-	if(!(*N).value)
+	if (!(*N).value)
 	{
 		free((*N).key);
 		free(N);
@@ -48,7 +48,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	In = (const unsigned char *)key;
 	k = key_index(In, ht->size);
-	for(Tmp = ht->array[k]; Tmp; Tmp = Tmp->next)
+	for (Tmp = ht->array[k]; Tmp; Tmp = Tmp->next)
 	{
 		if (!strcmp((*Tmp).key, key))
 		{
