@@ -3,7 +3,7 @@
 /**
  * Creat_hash_case - the function name
  * @cle: the fisrt input
- * @value: the second input
+ * @valeur: the second input
  * Return: the result
  */
 hash_node_t *Creat_hash_case(const char *cle, const char *valeur)
