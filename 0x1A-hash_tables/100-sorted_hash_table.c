@@ -10,7 +10,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	unsigned long int k = 0;
 	shash_table_t *Sh;
 
-	Sh = malloc(sizeof(shash_table_t))
+	Sh = malloc(sizeof(shash_table_t));
 	if (!Sh)
 		return (NULL);
 	(*Sh).size = size;
@@ -83,7 +83,7 @@ shash_node_t *Creating_Sh_Nodes(const char *cle, const char *valeur)
 {
 	shash_node_t *SH;
 
-	SH = malloc(sizeof(shash_node_t))
+	SH = malloc(sizeof(shash_node_t));
 	if (!SH)
 		return (NULL);
 	(*SH).key = strdup(cle);
