@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """ Imported modules """
 
+
 def island_perimeter(grid):
-    """ The function definition 
+    """ The function definition
     Args:
         gris: the input
     Return
