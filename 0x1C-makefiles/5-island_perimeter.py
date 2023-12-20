@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ Imported modules """
 
 def island_perimeter(grid):
