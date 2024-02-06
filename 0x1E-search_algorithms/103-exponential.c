@@ -1,34 +1,34 @@
 #include "search_algos.h"
 
 /**
- * ex_binary_search - the function name
+ * Binary_searching - the function name
  * @array: the first input
  * @size: the second input
  * @value: the third input
  * @start: the firth input
  * Return: the result
  */
-int ex_binary_search(int *array, size_t size, int value, size_t start)
+int Binary_searching(int *array, size_t size, int value, size_t begin)
 {
-	size_t i = 0, first = start, last = size - 1;
+	size_t i = 0, left = begin, right = size - 1;
 
 	if (array)
 	{
-		while (first <= last)
+		while (left <= right)
 		{
 			printf("Searching in array: ");
-			for (i = first; i <= last; i++)
+			for (i = left; i <= right; i++)
 			{
-				if (i != first)
+				if (i != left)
 					printf(", ");
 				printf("%d", array[i]);
 			}
 			printf("\n");
-			i = (first + last) / 2;
+			i = (left + right) / 2;
 			if (value > array[i])
-				first = i + 1;
+				left = i + 1;
 			else if (value < array[i])
-				last = i - 1;
+				right = i - 1;
 			else
 				return (i);
 		}
@@ -37,15 +37,12 @@ int ex_binary_search(int *array, size_t size, int value, size_t start)
 }
 
 /**
- * exponential_search - searches for a value in an array of integers
- *
- * @array: a pointer to the first element of the array to search in
- * @size: the number of elements in array
- * @value: the value to search for
- *
- * Return: the index where value is located or -1 on failure or not found
+ * exponential_search - the function name
+ * @array: he first input
+ * @size: the second input
+ * @value: the third input
+ * Return: the result
  */
-
 int exponential_search(int *array, size_t size, int value)
 {
 	size_t i;
@@ -59,7 +56,7 @@ int exponential_search(int *array, size_t size, int value)
 		else
 			i = i + 1;
 		printf("Value found between indexes [%lu] and [%lu]\n", i / 2, i - 1);
-		return (ex_binary_search(array, i, value, i / 2));
+		return (Binary_searching(array, i, value, i / 2));
 	}
 
 	return (-1);
