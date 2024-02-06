@@ -1,38 +1,56 @@
 #include "search_algos.h"
 
 /**
- * binary_search - the name of the function
- * @array: the first input
- * @size: the second input
- * @value: the third input
- * Return: the result
+ * print_array - prints the array of ints, separated with commas
+ *
+ * @array: a pointer to the array to print
+ * @first: the first index to print
+ * @last: the last index to print
  */
+
+void print_array(int *array, size_t first, size_t last)
+{
+	size_t i;
+
+	printf("Searching in array: ");
+	for (i = first; i <= last; i++)
+	{
+		if (i != first)
+			printf(", ");
+		printf("%d", array[i]);
+	}
+	printf("\n");
+}
+
+/**
+ * binary_search - searches for a value in an array of integers
+ *
+ * @array: a pointer to the first element of the array to search in
+ * @size: the number of elements in array
+ * @value: the value to search for
+ *
+ * Return: the index where value is located or -1 on failure or not found
+ */
+
 int binary_search(int *array, size_t size, int value)
 {
-	int j, right, left;
+	size_t i = 0, first = 0, last = size - 1;
 
-	left = 0;
-	right = (int)size - 1;
-	if (array == NULL)
-		return (-1);
-	while (right >= left)
+	if (array)
 	{
-		printf("Searching in array: ");
-		for (j = left; j <= right; j++)
+		while (first <= last)
 		{
-			if (j != left)
-				printf(",");
-			printf(" %d", array[j]);
-		}
-		printf("\n");
-		j = (right + left) / 2;
+			print_array(array, first, last);
+			i = (first + last) / 2; /* Gets the middle value */
 
-		if (array[j] == value)
-			return (j);
-		else if (array[j] > value)
-			right = j - 1;
-		else
-			left = j + 1;
+			if (value > array[i]) /* Uses the right part of array */
+				first = i + 1;
+			else if (value < array[i]) /* Uses the left part of array */
+				last = i - 1;
+			else
+				return (i);
+		}
 	}
+
 	return (-1);
 }
