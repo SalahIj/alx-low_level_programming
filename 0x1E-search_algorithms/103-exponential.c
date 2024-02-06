@@ -5,7 +5,7 @@
  * @array: the first input
  * @size: the second input
  * @value: the third input
- * @start: the firth input
+ * @begin: the firth input
  * Return: the result
  */
 int Binary_searching(int *array, size_t size, int value, size_t begin)
