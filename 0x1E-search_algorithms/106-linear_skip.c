@@ -13,7 +13,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	if (list == NULL)
 		return (NULL);
 
-	for (cur = list; cur->next && cur->n < value)
+	for (cur = list; cur->next && cur->n < value;)
 	{
 		prev = cur;
 		if (cur->express)
