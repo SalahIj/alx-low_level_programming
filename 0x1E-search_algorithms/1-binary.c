@@ -40,7 +40,14 @@ int binary_search(int *array, size_t size, int value)
 	{
 		while (first <= last)
 		{
-			print_array(array, first, last);
+			printf("Searching in array: ");
+			for (i = first; i <= last; i++)
+			{
+				if (i != first)
+					printf(", ");
+				printf("%d", array[i]);
+			}
+			printf("\n");
 			i = (first + last) / 2; /* Gets the middle value */
 
 			if (value > array[i]) /* Uses the right part of array */
